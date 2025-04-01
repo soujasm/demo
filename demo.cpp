@@ -122,37 +122,32 @@ int main(){
 
     //v.	Write a program to find if the number is palindrome or not.
     #include <iostream>
-    using namespace std;
-    class pd{
-        public:
-        int palin(int a){
-            int reversed=0, remainder;
-            int original = a;// Stored the Original Number Given By the User
-            while (a > 0){
-                remainder = a % 10; //to find the last digit
-                reversed = reversed * 10 + remainder;// creating reaverse number
-                a /= 10;//remove the last digit
-            }
-            if (original == reversed){
-                return 1;
-            } else {
-                return 0;
-            }
+using namespace std;
 
-        }
-
-    };
-    int main(){
-        pd pd;
-        int a;
-        cout<<"Enter a number: ";
-        cin >> a;
-        if(pd.palin(a)){
-            cout<<"The number is palindrome."<<endl;
-        }else{
-            cout<<"The number is not palindrome."<<endl;
-        }
+bool isPalindrome(int num) {
+    int rev = 0, o = num; 
+    while (num > 0) {
+        rev = rev * 10 + num % 10;
+        num /= 10;
     }
+    return o == rev;
+}
+
+int main() {
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
+    if (isPalindrome(num)) {
+        cout << "The number is palindrome." << endl;
+    } else {
+        cout << "The number is not palindrome." << endl;
+    }
+    return 0;
+
+}
+
+
+
 
 
     //vi.	Write a program to implement unary (-) operator overloading.
