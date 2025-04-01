@@ -404,35 +404,7 @@
 
 <!-- Write a JavaScript program to accept a number from the user and display the sum of its digits.
  -->
- <!DOCTYPE html>
- <html lang="en">
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
- </head>
- <body>
-     <h1>Sum of Digits</h1>
-     <p>Enter a number to find the sum of its digits.</p>
-     <form id="numberForm">
-         <label for="number">Number:</label>
-         <input type="text" id="number" name="number" required>
-         <button type="submit">Submit</button>
-     </form>
-     <p id="result"></p>
-     
-     <script>
-         document.getElementById('numberForm').addEventListener('submit', function(event) {
-             let number = document.getElementById('number').value;
-             let sum = 0;
-             for (let i = 0; i < number.length; i++) {
-             sum += parseInt(number[i]);
-             }
-             document.getElementById('result').innerText = "Sum of digits: " + sum;
-         });
-     </script>
- </body>
- </html>
+
  <html>
   <head>
     <title></title>
@@ -448,41 +420,7 @@ document.write("sum is " +sum);
 alert("sum is "+sum);
     </script>
 </html>
- <pre>
- ### Putting It All Together:
  
- Let's walk through an example:
- 
- If `number` is `"1234"` and `sum` is initially `0`:
- 
- 1. The loop starts with `i = 0`.
-    - `number[i]` is `'1'`.
-    - `parseInt('1')` converts it to the integer `1`.
-    - `sum += 1` updates `sum` to `1`.
- 
- 2. The loop continues with `i = 1`.
-    - `number[i]` is `'2'`.
-    - `parseInt('2')` converts it to the integer `2`.
-    - `sum += 2` updates `sum` to `3`.
- 
- 3. The loop continues with `i = 2`.
-    - `number[i]` is `'3'`.
-    - `parseInt('3')` converts it to the integer `3`.
-    - `sum += 3` updates `sum` to `6`.
- 
- 4. The loop continues with `i = 3`.
-    - `number[i]` is `'4'`.
-    - `parseInt('4')` converts it to the integer `4`.
-    - `sum += 4` updates `sum` to `10`.
- 
- At the end of the loop, the `sum` will be `10`, which is the sum of the digits in the number `"1234"`.
- 
- ### Summary:
- - The `for` loop iterates through each character in the `number` string or array.
- - Each character is converted to an integer using `parseInt()`.
- - The integer is then added to the `sum` using the `+=` operator.
- - This process continues until all characters in the `number` are processed, and you end up with the total sum of the digits in the `number`.
- </pre>
 
  <!-- .Using java script, demonstrate validating Text Input Fields,Drop-down Lists and Checkboxes -->
 
