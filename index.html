@@ -1,0 +1,595 @@
+<!-- 1. Design a web page that automatically redirects the user to Other Content. of the google -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <!-- <meta http-equiv="refresh" content="2000; url=https://wwwwww.google.com/"> -->
+</head>
+<body>
+    <p>If you are not redirected automatically, follow this <a href="https://www.google.com/">link</a>.</p>
+</body>
+
+</html>
+
+<!--    Design a web page by making an image as a hyperlink Design a web page with Image Map-> -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mall Directory</title>
+<style>
+    img {
+        width : 367px;
+        height: 274px;
+    }
+</style>
+</head>
+<body>
+
+<h1>Welcome to the Mall Directory</h1>
+
+<img src="image/mall.png" alt="Mall Map" usemap="#mallmap"  >
+
+<map name="mallmap">
+    <area shape="" coords="138,104,333,128" href="https://www.google.com/" alt="Store 1">
+    <area shape="rect" coords="1,38,90,160" href="s2.html" alt="Store 2">
+   
+</map>
+
+</body>
+</html>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Image as a hyperlink</title>
+</head>
+<body>
+    <a href="https://www.w3schools.com/html/html_images_imagemap.asp">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" width="272" height="92">
+    </a>
+ 
+
+</body>
+</html>
+<!-- Display a time table and display it in tabular format. -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Time Table</title>
+</head>
+
+</style>
+<body>
+
+<h1>Time Table</h1>
+<table border="1">
+  <tr> 
+    <th>Time <p>Day</p> </th>
+    <th>7:00 - 8:00</th>
+    <th>8:00 - 9:00</th>
+    <th> </th>
+    <th>9:30 - 10:30</th>
+    <th>10:30 - 11:30</th>
+    <th> </th>
+    <th>12:00 - 1:00</th>
+    <th>1:00 - 2:00</th>
+    <th> </th>
+    <th>2:30 - 3:30</th>
+    <th>3:30 - 4:30</th>
+
+  </tr>
+  <tr>
+    <th>MON </th>
+    <td> </td>
+    <td> </td>
+    <td> B </td>
+    <td colspan="2">MJ-WEB(VS)</td>
+    <td> B </td>
+    <td colspan="2"> VSC-ALP B1 LAB 403(AMJ) / <p>SEC PL/SQL B2 Lab 503</p> </td>
+    <td> B </td>
+    <td colspan="2">MN-ISM(SK)</td>
+  </tr>
+  <tr>
+    <th>TUE</th>
+    <td  colspan="2"> </td>
+    <td> R</td>
+    <td colspan="2">OE-LS(PP)</td>
+    <td>R</td>
+    <td colspan="2"> VSC-ALP B2 LAB 403(AMJ)/ <p>SEC PL/SQL B2 Lab 503</p> </td>
+    <td>R</td>
+    <td colspan="2"></td>
+  </tr>
+  <tr>
+    <th>WED</th>
+    <td  colspan="2"> </td>
+    <td> E</td>
+    <td colspan="2">OE-CW(AKJ)</td>
+    <td>E</td>
+    <td colspan="2"> Hindi(SS)</td>
+    <td>E</td>
+    <td colspan="2"></td>
+  </tr>
+
+</table>
+
+</body>
+</html>
+
+<!-- Design an admission form for any course in your college with text, password fields, check boxes, radio button and reset button.
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+    <title>Admission Form</title>
+    <style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f7f7f7;
+        color: #202124;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    form {
+        width: 90%;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+    h1 {
+        text-align: center;
+        color: #3c4043;
+        margin-bottom: 20px;
+    }
+    label {
+        font-weight: 500;
+        display: block;
+        margin-bottom: 8px;
+        color: #3c4043;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+        border-color: #4285f4;
+        outline: none;
+        box-shadow: 0 0 5px rgba(66, 133, 244, 0.5);
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+    .radio-group label,
+    .checkbox-group label {
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 10px;
+        color: #3c4043;
+    }
+    .radio-group input[type="radio"] + label::before,
+    .checkbox-group input[type="checkbox"] + label::before {
+        content: '';
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        margin-right: 10px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        background-color: #fff;
+        vertical-align: middle;
+        transition: background-color 0.3s ease;
+    }
+    .checkbox-group input[type="checkbox"] + label::before {
+        border-radius: 4px;
+    }
+    .radio-group input[type="radio"]:checked + label::before {
+        background-color: #4285f4;
+        border-color: #4285f4;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Ccircle cx='12' cy='12' r='5'/%3E%3C/svg%3E");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .checkbox-group input[type="checkbox"]:checked + label::before {
+        background-color: #4285f4;
+        border-color: #4285f4;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    input[type="reset"] {
+        background-color: transparent;
+        color: #4285f4;
+        padding: 12px 20px;
+        border: 1px solid #4285f4;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+        display: block;
+        margin: 20px auto 0;
+    }
+    input[type="submit"] {
+        background-color: transparent;
+        color: #4285f4;
+        padding: 12px 20px;
+        border: 1px solid #4285f4;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+        display: block;
+        margin: 20px auto 0;
+    }
+    input[type="reset"]:hover {
+        background-color: #4285f4;
+        color: white;
+    }
+    input[type="submit"]:hover {
+        background-color: #4285f4;
+        color: white;
+    }
+    .radio-group,
+    .checkbox-group {
+        margin-bottom: 20px;
+    }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+ </head>
+ <body>
+    <forma action="">
+    <h1>Course Admission Form</h1>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+
+    <div class="radio-group">
+        <label>Gender:</label>
+        <label for="male">
+            <input type="radio" id="male" name="gender" value="male">
+            Male
+        </label>
+        <label for="female">
+            <input type="radio" id="female" name="gender" value="female">
+            Female
+        </label>
+        <label for="other">
+            <input type="radio" id="other" name="gender" value="other">
+            Other
+        </label>
+    </div>
+
+    <div class="checkbox-group">
+        <label>Courses:</label>
+        <label for="course1">
+            <input type="checkbox" id="course1" name="course1" value="Web Development">
+            Web Development
+        </label>
+        <label for="course2">
+            <input type="checkbox" id="course2" name="course2" value="Data Science">
+            Data Science
+        </label>
+        <label for="course3">
+            <input type="checkbox" id="course3" name="course3" value="AI">
+            AI
+        </label>
+    </div>
+    <div style="display: flex; justify-content: center;">
+          <input type="reset" value="Reset" style="margin-right: 10px;">
+          <input type="submit" value="Submit">
+     </div>
+    </form>
+ </body>
+ </html>
+
+
+ <!-- Using JavaScript, design a web page to accept a number from the user and print its Factorial -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial </title>
+    <script>
+        function factorial(){
+            var num = document.getElementById("num").value;
+            var result = 1;
+            for(var i = 1; i <=num; i++){
+                result *= i;
+            } 
+            alert("The factorial of " + num + " is " + result);
+        }
+    </script>
+ </head>
+ <body>
+    <form action="#">
+        <input type="number" id="num" placeholder="Enter a number" required>
+        <input type = "button" value = "Calculate Factorial " onclick="factorial()">
+        <input type="reset" value="Reset Form Fields">
+        
+        
+
+    </form>
+ </body>
+ </html>
+
+
+ 
+<!-- Using JavaScript, a web page that prints Fibonacci series/any given series. -->
+<!doctype html>
+<html>
+<head>
+<title></title>
+<script>
+ var a=1,b=1,sum=0;
+    var n=parseInt(prompt("Enter the number:"));
+      for(var i=0;i<=n;i++){
+        sum=a+b;
+        a=b;
+        b=sum;
+    }
+    document.write(sum);
+</script>
+</head>
+<body></body>
+</html>
+
+<!-- Write a JavaScript program to display all the prime numbers between 1 and 100. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Number Checker</title>
+</head>
+<body>
+    <h1>Check if a Number is Prime</h1>
+    <p>Enter a number to check if it is prime:</p>
+    <button onclick="isPrime()">Check Prime</button>
+    <p id="result"></p>
+    <script>
+        function isPrime(num) {
+           let n = parseInt(prompt("Enter a Number: "));
+           if(n <= 0 || isNaN(n)){
+            alert("Please enter a positive number greater than 0.");
+           } else {
+            let prime = true;
+            for(let i =2; i <= Math.sqrt(n);i++){
+                if(n % i == 0 ){
+                    prime  = false;
+                   alert(n + " is not a prime number.");
+                    break;
+                } else if (n == 2){
+                    prime = true;
+                    alert(n + " is a prime number.");
+                    break;
+                }
+                else {
+                    prime = true;
+                    alert (n + " is a prime number.");
+                    break;
+                }
+            }
+           }
+           
+        }
+    </script>
+</body>
+</html>
+
+<!-- Write a JavaScript program to accept a number from the user and display the sum of its digits.
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+     <h1>Sum of Digits</h1>
+     <p>Enter a number to find the sum of its digits.</p>
+     <form id="numberForm">
+         <label for="number">Number:</label>
+         <input type="text" id="number" name="number" required>
+         <button type="submit">Submit</button>
+     </form>
+     <p id="result"></p>
+     
+     <script>
+         document.getElementById('numberForm').addEventListener('submit', function(event) {
+             let number = document.getElementById('number').value;
+             let sum = 0;
+             for (let i = 0; i < number.length; i++) {
+             sum += parseInt(number[i]);
+             }
+             document.getElementById('result').innerText = "Sum of digits: " + sum;
+         });
+     </script>
+ </body>
+ </html>
+ <html>
+  <head>
+    <title></title>
+    </head>
+    <script>
+      function addNumbers(a,b){
+        return a+b;
+      }
+      let num1=parseFloat(prompt("Enter 1st number:"));
+let num2=parseFloat(prompt("Enter 2st number:"));
+let sum=addNumbers(num1,num2);
+document.write("sum is " +sum);
+alert("sum is "+sum);
+    </script>
+</html>
+ <pre>
+ ### Putting It All Together:
+ 
+ Let's walk through an example:
+ 
+ If `number` is `"1234"` and `sum` is initially `0`:
+ 
+ 1. The loop starts with `i = 0`.
+    - `number[i]` is `'1'`.
+    - `parseInt('1')` converts it to the integer `1`.
+    - `sum += 1` updates `sum` to `1`.
+ 
+ 2. The loop continues with `i = 1`.
+    - `number[i]` is `'2'`.
+    - `parseInt('2')` converts it to the integer `2`.
+    - `sum += 2` updates `sum` to `3`.
+ 
+ 3. The loop continues with `i = 2`.
+    - `number[i]` is `'3'`.
+    - `parseInt('3')` converts it to the integer `3`.
+    - `sum += 3` updates `sum` to `6`.
+ 
+ 4. The loop continues with `i = 3`.
+    - `number[i]` is `'4'`.
+    - `parseInt('4')` converts it to the integer `4`.
+    - `sum += 4` updates `sum` to `10`.
+ 
+ At the end of the loop, the `sum` will be `10`, which is the sum of the digits in the number `"1234"`.
+ 
+ ### Summary:
+ - The `for` loop iterates through each character in the `number` string or array.
+ - Each character is converted to an integer using `parseInt()`.
+ - The integer is then added to the `sum` using the `+=` operator.
+ - This process continues until all characters in the `number` are processed, and you end up with the total sum of the digits in the `number`.
+ </pre>
+
+ <!-- .Using java script, demonstrate validating Text Input Fields,Drop-down Lists and Checkboxes -->
+
+<html>
+    <head>
+            <title>Field Validation</title>
+        <script>
+            function validateForm() {
+                var name = document.getElementById("name").value;
+                var country = document.getElementById("country").value;
+                var agree = document.getElementById("terms").checked;
+    
+                // Validating Text Input Field
+                if (name == "") {
+                    alert("Name must be filled out");
+                    return false;
+                }
+    
+                // Validating Drop-down List
+                if (country == "") {
+                    alert("Please select a country");
+                    return false;
+                }
+    
+                // Validating Checkbox
+                if (!agree) {
+                    alert("You must agree to the terms");
+                    return false;
+                }
+    
+                alert("Form submitted successfully!");
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Field Validation</h2>
+        <form onsubmit="return validateForm()">
+            Name: <input type="text" id="name" placeholder="Enter your name"><br><br>
+            Country: 
+            <select id="country">
+                <option value="">Select Country</option>
+                <option value="USA">USA</option>
+                <option value="India">India</option>
+                <option value="UK">UK</option>
+            </select><br><br>
+            <input type="checkbox" id="terms"> I agree to the terms and conditions<br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+    </html>
+
+
+    <!-- Using java script, demonstrate the use of onDragDrop, onError, onFocus events. -->
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Event Handling - Part B</title>
+</head>
+<body>
+ <h2>Event Handling - Part B</h2>
+ 
+ <div draggable="true" ondragstart="alert('Dragging started!')" ondrop="alert('Dropped!')" style="width:100px; height:100px; background:blue;"></div>
+ 
+ <img src="Gaming.jpg" onerror="alert('Error loading image!')" alt="Image">
+ 
+ <input type="text" onfocus="alert('Input focused!')" placeholder="Focus Example">
+</body>
+</html>
+
+
+<!-- d.Using java script, demonstrate the use of onMouseDown, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onMove events.
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <title>Mouse Events</title>
+   <style>
+     #box {
+       width: 200px;
+       height: 100px;
+       background: lightblue;
+       text-align: center;
+       line-height: 100px;
+       font-size: 18px;
+       border: 2px solid black;
+       margin: 50px auto;
+     }
+   </style>
+ </head>
+ <body>
+ 
+   <div id="box">Move or Click</div>
+ 
+   <script>
+     let box = document.getElementById("box");     
+ 
+     box.onmousedown = () => box.innerText = "Mouse Down";
+     box.onmouseup = () => box.innerText = "Mouse Up";
+     box.onmouseover = () => box.innerText = "Mouse Over";
+     box.onmouseout = () => box.innerText = "Mouse Out";
+     box.onmousemove = () => box.innerText = "Mouse Move";
+   </script>
+ 
+ </body>
+ </html>
+
+
+ 
+ 
