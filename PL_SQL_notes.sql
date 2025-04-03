@@ -200,20 +200,39 @@ SELECT * FROM deleted_students;
 --12.	Create a PL/SQL cursor named emp_cursor that retrieves the first_name of employees from the
 -- employees table where the department_id is 10. Open the cursor, fetch and display each employee’s 
 -- name using a loop, and close the cursor after processing all rows.
+
+-- Create employees table (if it doesn't exist)
+CREATE TABLE employees (
+  employee_id INT PRIMARY KEY,
+  first_name VARCHAR(50),
+  department_id INT
+);
+
+-- Insert sample data (if table is empty)
+INSERT INTO employees (employee_id, first_name, department_id) VALUES (1, 'John', 10);
+INSERT INTO employees (employee_id, first_name, department_id) VALUES (2, 'Alice', 20);
+INSERT INTO employees (employee_id, first_name, department_id) VALUES (3, 'Bob', 10);
+
 DECLARE
-    CURSOR mycur IS SELECT name FROM students;
-    v_sname students.name%TYPE;
+    CURSOR emp_cursor IS
+        SELECT first_name
+        FROM employees
+        WHERE department_id = 10;
+    
+    v_first_name VARCHAR2(50);
 BEGIN
-    OPEN mycur;
+    OPEN emp_cursor;
+    
     LOOP
-        FETCH mycur INTO v_sname;
-        EXIT WHEN mycur%NOTFOUND;
-        DBMS_OUTPUT.PUT_LINE('Student Name: ' || v_sname);
+        FETCH emp_cursor INTO v_first_name;
+        EXIT WHEN emp_cursor%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE('Employee Name: ' || v_first_name);
     END LOOP;
-    DBMS_OUTPUT.PUT_LINE('Total Students: ' || mycur%ROWCOUNT);
-    CLOSE mycur;
+    
+    CLOSE emp_cursor;
 END;
 /
+
 
 
 --13.	Create a PL/SQL cursor named mycur that retrieves the sname of students from the students table.
