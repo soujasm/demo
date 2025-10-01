@@ -1,0 +1,256 @@
+1.STACK
+class Stack:
+    def __init__(self):
+        self.items = []
+
+    def is_empty(self):
+        return self.items == []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        if not self.is_empty():
+            return self.items.pop()
+        else:
+            raise IndexError("pop from empty stack")
+
+    def peek(self):
+        if not self.is_empty():
+            return self.items[-1]
+        else:
+            raise IndexError("peek from empty stack")
+
+    def size(self):
+        return len(self.items)
+
+
+# Create a new stack
+stack = Stack()
+
+# Push items onto the stack
+stack.push(1)
+stack.push(2)
+stack.push(3)
+stack.push(4)
+stack.push(5)
+
+# Check the size of the stack
+print("Size of stack:", stack.size())
+
+# Pop items from the stack
+while not stack.is_empty():
+    print("\nTop item:", stack.peek()) 
+    print("Popped item:", stack.pop())
+
+# Check if the stack is empty again
+print("\nIs the stack empty?", stack.is_empty())
+
+
+2.Queue
+class Queue:
+    def __init__(self):
+        self.items = []
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def enqueue(self, item):
+        self.items.append(item)
+
+    def dequeue(self):
+        if not self.is_empty():
+            return self.items.pop(0)
+        else:
+            raise IndexError("dequeue from empty queue")
+
+    def front(self):
+        if not self.is_empty():
+            return self.items[0]
+        else:
+            raise IndexError("front from empty queue")
+
+    def size(self):
+        return len(self.items)
+
+# Create a new queue
+queue = Queue()
+
+# Enqueue items into the queue
+queue.enqueue(1)
+queue.enqueue(2)
+queue.enqueue(3)
+
+# Check the size of the queue
+print("Size of queue:", queue.size())
+
+# Dequeue items from the queue
+while not queue.is_empty():
+    print("\nFront item:", queue.front())
+    print("Dequeued item", queue.dequeue())
+
+print("\nIs the queue empty?", queue.is_empty())
+
+
+3.Array
+arr = []
+
+n = int(input("How many elements you want to insert? "))
+for i in range(n):
+    element = int(input(f"Enter element {i+1}: "))
+    arr.append(element)
+
+print("Array after insertion:", arr)
+
+new_element = int(input("Enter element to insert: "))
+position = int(input("Enter position (index) to insert at: "))
+arr.insert(position, new_element)//main
+print("Array after inserting", new_element, "at position", position, ":", arr)
+
+del_pos = int(input("Enter position (index) to delete element from: "))
+if 0 <= del_pos < len(arr):
+    deleted = arr.pop(del_pos)
+    print("Deleted element:", deleted)
+    print("Array after deletion:", arr)
+else:
+    print("Invalid position! No element deleted.")
+
+
+4.Binary Search tree and tree traversal
+# Node structure
+class Node:
+    def __init__(self, key):
+        self.key = key
+        self.left = None
+        self.right = None
+
+# Insert a node
+def insert(root, key):
+    if root is None:
+        return Node(key)
+    if key < root.key:
+        root.left = insert(root.left, key)
+    else:
+        root.right = insert(root.right, key)
+    return root
+
+# Inorder Traversal (Left → Root → Right)
+def inorder(root):
+    if root:
+        inorder(root.left)
+        print(root.key, end=" ")
+        inorder(root.right)
+
+# Preorder Traversal (Root → Left → Right)
+def preorder(root):
+    if root:
+        print(root.key, end=" ")
+        preorder(root.left)
+        preorder(root.right)
+
+# Postorder Traversal (Left → Right → Root)
+def postorder(root):
+    if root:
+        postorder(root.left)
+        postorder(root.right)
+        print(root.key, end=" ")
+
+# Example usage
+root = None
+values = [50, 30, 20, 40, 70, 60, 80]
+
+for v in values:
+    root = insert(root, v)
+
+print("Inorder Traversal:")
+inorder(root)
+print("\nPreorder Traversal:")
+preorder(root)
+print("\nPostorder Traversal:")
+postorder(root)
+
+
+5. Sorting
+arr = [64, 25, 12, 22, 11]
+#bubble sort
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(n - i - 1):  # Last i elements are already in place
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+
+arr1 = [64, 25, 12, 22, 11]
+bubble_sort(arr1)
+print("Bubble Sort:", arr1)
+
+#insertion sort
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and key < arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+
+arr2 = [64, 25, 12, 22, 11]
+insertion_sort(arr2)
+print("Insertion Sort:", arr2)
+
+#selection sort
+def selection_sort(arr):
+    for i in range(len(arr)):
+        min_idx = i
+        for j in range(i + 1, len(arr)):
+            if arr[j] < arr[min_idx]:
+                min_idx = j
+        arr[i], arr[min_idx] = arr[min_idx], arr[i]
+
+arr3 = [64, 25, 12, 22, 11]Q
+selection_sort(arr3)
+print("Selection Sort:", arr3)
+
+
+6. linear and binary search
+#linear search
+def linear_search(arr, x):
+    for i in range(len(arr)):
+        if arr[i] == x:
+            return i
+    return -1
+
+arr1 = [10, 23, 45, 70, 11, 15]
+target1 = 70
+result1 = linear_search(arr1, target1)
+
+if result1 != -1:
+    print("Linear Search: Element found at index", result1)
+else:
+    print("Linear Search: Element not found")
+
+#binary search
+def binary_search(arr, x):
+    low = 0
+    high = len(arr) - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] < x:
+            low = mid + 1
+        else:
+            high = mid - 1
+
+    return -1
+
+arr2 = [5, 12, 18, 23, 45, 67]
+target2 = 23
+result2 = binary_search(arr2, target2)
+
+if result2 != -1:
+    print("Binary Search: Element found at index", result2)
+else:
+    print("Binary Search: Element not found")
